@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin Hernandez - Commentaires & Avis</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='50%25' stop-color='%23a855f7'/%3E%3Cstop offset='100%25' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='26' fill='url(%23g)'/%3E%3Ctext x='50' y='67' font-family='sans-serif' font-size='44' font-weight='900' fill='%23ffffff' text-anchor='middle'%3EMH%3C/text%3E%3Ccircle cx='82' cy='24' r='5' fill='%2338bdf8'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Barre de navigation -->
+        <header class="navbar">
+            <a href="site.html" class="brand">
+                <span>Marvin Hernandez</span>
+                <span class="brand-badge">AVIS</span>
+            </a>
+            <div class="nav-buttons">
+                <button onclick="window.location.href='Services.html'">Services</button>
+                <button onclick="window.location.href='Competences.html'">Compétences</button>
+                <button onclick="window.location.href='Contacts.html'">Contacts</button>
+                <button onclick="window.location.href='FAQ.html'">FAQ</button>
+                <button class="btn-back" onclick="window.location.href='site.html'">
+                    ← Retour à l'accueil
+                </button>
+            </div>
+        </header>
+
+        <!-- Titre et présentation -->
+        <main>
+            <section class="hero" style="padding-bottom: 25px;">
+                <span class="hero-tag">💬 Témoignages & Retours clients</span>
+                <h1>Espace <span class="gradient-text">Commentaires</span></h1>
+                <p>Retrouvez les avis de ceux qui m'ont fait confiance dans mes différents domaines d'activité et
+                    publiez votre propre retour d'expérience.</p>
+            </section>
+
+            <!-- SECTION COMMENTAIRES FONCTIONNELLE -->
+            <section class="comments-section" style="margin-top: 10px;">
+                <div class="comments-layout">
+                    <!-- Formulaire d'ajout de commentaire -->
+                    <div class="comment-form-card">
+                        <h3>✍️ Laisser un avis</h3>
+                        <p>Votre retour est précieux pour continuer à progresser et offrir des prestations de qualité.
+                        </p>
+
+                        <form id="commentForm" onsubmit="submitComment(event)">
+                            <div class="form-group">
+                                <label for="authorName">Votre Nom ou Prénom *</label>
+                                <input type="text" id="authorName" class="form-control" placeholder="Ex: Jean Dupont"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="serviceCategory">Domaine concerné *</label>
+                                <select id="serviceCategory" class="form-control" required>
+                                    <option value="💼 Vente & Négociation">💼 Vente & Négociation</option>
+                                    <option value="🎵 Musique & Composition">🎵 Musique & Composition</option>
+                                    <option value="🍳 Cuisine & Gastronomie">🍳 Cuisine & Gastronomie</option>
+                                    <option value="🐎 Équitation & Équithérapie">🐎 Équitation & Équithérapie</option>
+                                    <option value="🤝 Engagement Humanitaire">🤝 Engagement Humanitaire</option>
+                                    <option value="✨ Prestation Générale">✨ Prestation Générale</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Votre Note</label>
+                                <div class="star-rating" id="starRating">
+                                    <span class="star active" data-value="1" onclick="selectRating(1)">★</span>
+                                    <span class="star active" data-value="2" onclick="selectRating(2)">★</span>
+                                    <span class="star active" data-value="3" onclick="selectRating(3)">★</span>
+                                    <span class="star active" data-value="4" onclick="selectRating(4)">★</span>
+                                    <span class="star active" data-value="5" onclick="selectRating(5)">★</span>
+                                </div>
+                                <input type="hidden" id="ratingValue" value="5">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="commentMessage">Votre Message *</label>
+                                <textarea id="commentMessage" class="form-control" rows="4"
+                                    placeholder="Partagez votre avis, vos impressions ou le déroulement de la mission..."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="primary" style="width: 100%; padding: 12px; font-size: 1rem;">
+                                Publier mon avis ✨
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Flux des commentaires -->
+                    <div>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h3 style="font-size: 1.3rem;">Derniers avis reçus (<span id="commentsCount">0</span>)</h3>
+                            <button onclick="resetComments()"
+                                style="font-size: 0.8rem; padding: 6px 12px; background: rgba(255,255,255,0.04);">
+                                🔄 Réinitialiser
+                            </button>
+                        </div>
+                        <div class="comments-feed" id="commentsFeed">
+                            <!-- Les commentaires sont injectés ici par JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Boutons de redirection bas de page -->
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 50px 0;">
+                <button class="btn-back" style="padding: 12px 24px; font-size: 1rem;"
+                    onclick="window.location.href='site.html'">
+                    ← Retour à la page d'accueil
+                </button>
+            </div>
+        </main>
+
+        <!-- Pied de page -->
+        <footer>
+            <p>© 2026 Marvin Hernandez — Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <!-- Script de gestion des commentaires avec persistance -->
+    <script>
+        let currentRating = 5;
+
+        // Gestion de la notation par étoiles
+        function selectRating(val) {
+            currentRating = val;
+            document.getElementById('ratingValue').value = val;
+            const stars = document.querySelectorAll('#starRating .star');
+            stars.forEach(star => {
+                const starVal = parseInt(star.getAttribute('data-value'), 10);
+                if (starVal <= val) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+
+        // Commentaires de référence préchargés
+        const defaultComments = [
+            {
+                name: "Alexandre D.",
+                category: "💼 Vente & Négociation",
+                rating: 5,
+                date: "Il y a 3 jours",
+                text: "Collaboration remarquable avec Marvin sur notre prospection technico-commerciale. Son Bachelor 1 et son sens de la négociation se ressentent immédiatement : nous avons signé 2 nouveaux contrats majeurs !"
+            },
+            {
+                name: "Camille R.",
+                category: "🐎 Équitation & Équithérapie",
+                rating: 5,
+                date: "Il y a 1 semaine",
+                text: "Une bienveillance et une écoute rares. Grâce à ses séances d'équithérapie et à la complicité qu'il crée avec les chevaux, ma fille a retrouvé calme et confiance en elle. Merci infiniment !"
+            },
+            {
+                name: "Julien M.",
+                category: "🎵 Musique & Composition",
+                rating: 5,
+                date: "Il y a 2 semaines",
+                text: "Marvin a composé l'habillage sonore de notre projet vidéo. Sens du tempo impeccable, créativité au rendez-vous et respect total du brief. Un profil artistique très talentueux."
+            },
+            {
+                name: "Élodie B.",
+                category: "🍳 Cuisine & Gastronomie",
+                rating: 5,
+                date: "Il y a 3 semaines",
+                text: "Des plats savoureux et une organisation impeccable pour notre événement de 15 personnes. Des saveurs équilibrées et une vraie passion communicative pour la bonne cuisine !"
+            }
+        ];
+
+        function getStoredComments() {
+            const stored = localStorage.getItem('marvin_comments');
+            if (stored) {
+                try {
+                    return JSON.parse(stored);
+                } catch (e) {
+                    return defaultComments;
+                }
+            }
+            return defaultComments;
+        }
+
+        function saveComments(comments) {
+            localStorage.setItem('marvin_comments', JSON.stringify(comments));
+        }
+
+        function renderComments() {
+            const comments = getStoredComments();
+            const feed = document.getElementById('commentsFeed');
+            const count = document.getElementById('commentsCount');
+            count.innerText = comments.length;
+            feed.innerHTML = '';
+
+            comments.forEach(c => {
+                const item = document.createElement('article');
+                item.className = 'comment-item';
+
+                // Génération des étoiles
+                let starsHtml = '';
+                for (let i = 0; i < 5; i++) {
+                    starsHtml += i < c.rating ? '★' : '☆';
+                }
+
+                // Initiales de l'auteur
+                const initial = c.name ? c.name.charAt(0).toUpperCase() : 'M';
+
+                item.innerHTML = `
+                    <div class="comment-header">
+                        <div class="comment-author-info">
+                            <div class="comment-avatar">${initial}</div>
+                            <div>
+                                <div class="comment-author-name">${escapeHtml(c.name)}</div>
+                                <span class="comment-badge">${escapeHtml(c.category)}</span>
+                            </div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div class="comment-stars">${starsHtml}</div>
+                            <div class="comment-date">${escapeHtml(c.date)}</div>
+                        </div>
+                    </div>
+                    <p class="comment-text">${escapeHtml(c.text)}</p>
+                `;
+                feed.appendChild(item);
+            });
+        }
+
+        function submitComment(e) {
+            e.preventDefault();
+            const nameInput = document.getElementById('authorName');
+            const categoryInput = document.getElementById('serviceCategory');
+            const messageInput = document.getElementById('commentMessage');
+
+            const name = nameInput.value.trim();
+            const category = categoryInput.value;
+            const message = messageInput.value.trim();
+
+            if (!name || !message) {
+                alert("Veuillez remplir tous les champs obligatoires.");
+                return;
+            }
+
+            const newComment = {
+                name: name,
+                category: category,
+                rating: currentRating,
+                date: "À l'instant",
+                text: message
+            };
+
+            const comments = getStoredComments();
+            comments.unshift(newComment);
+            saveComments(comments);
+            renderComments();
+
+            // Réinitialisation du formulaire
+            nameInput.value = '';
+            messageInput.value = '';
+            selectRating(5);
+
+            alert("✨ Merci " + name + " ! Votre avis a été publié avec succès.");
+        }
+
+        function resetComments() {
+            if (confirm("Voulez-vous réinitialiser les avis avec les témoignages par défaut ?")) {
+                localStorage.removeItem('marvin_comments');
+                renderComments();
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.innerText = text;
+            return div.innerHTML;
+        }
+
+        // Chargement initial
+        document.addEventListener('DOMContentLoaded', renderComments);
+        renderComments();
+    </script>
+</body>
+
+</html>

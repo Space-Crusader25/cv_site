@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin Hernandez - Foire Aux Questions (FAQ)</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='50%25' stop-color='%23a855f7'/%3E%3Cstop offset='100%25' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='26' fill='url(%23g)'/%3E%3Ctext x='50' y='67' font-family='sans-serif' font-size='44' font-weight='900' fill='%23ffffff' text-anchor='middle'%3EMH%3C/text%3E%3Ccircle cx='82' cy='24' r='5' fill='%2338bdf8'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Barre de navigation -->
+        <header class="navbar">
+            <a href="site.html" class="brand">
+                <span>Marvin Hernandez</span>
+                <span class="brand-badge">FAQ</span>
+            </a>
+            <div class="nav-buttons">
+                <button onclick="window.location.href='Services.html'">Services</button>
+                <button onclick="window.location.href='Competences.html'">Compétences</button>
+                <button onclick="window.location.href='Commentaires.html'">Commentaires</button>
+                <button onclick="window.location.href='Contacts.html'">Contacts</button>
+                <button class="btn-back" onclick="window.location.href='site.html'">
+                    ← Retour à l'accueil
+                </button>
+            </div>
+        </header>
+
+        <!-- Titre et présentation -->
+        <main>
+            <section class="hero" style="padding-bottom: 25px;">
+                <span class="hero-tag">❓ Questions fréquentes & Informations</span>
+                <h1>Foire Aux <span class="gradient-text">Questions</span></h1>
+                <p>Retrouvez ci-dessous les réponses aux questions les plus courantes sur mes prestations, mes modalités
+                    d'intervention et mon organisation.</p>
+            </section>
+
+            <!-- Liste des questions / réponses (Accordéon interactif) -->
+            <section class="faq-list">
+
+                <!-- Q1 -->
+                <div class="faq-card active" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>💼 Comment s'effectue la déclaration et la rémunération de vos services ?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Intervenant sous statut de salarié individuel, mes prestations sont déclarables en toute
+                        légalité et simplicité : soit en <strong>CESU (Chèque Emploi-Service Universel)</strong> pour
+                        les particuliers — ce qui vous permet de bénéficier de <strong>50% de crédit d'impôt</strong> —,
+                        soit sous contrat court (CDD / vacation horaire) pour les professionnels. Tout est transparent
+                        et sans mauvaise surprise.
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="faq-card" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>💻 Quels types de projets pouvez-vous développer en informatique ?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Ayant réussi l'épreuve immersive de la <strong>Piscine de l'École 42</strong>, je dispose de
+                        solides bases en algorithmique, en programmation (C, JavaScript, HTML5, CSS3) et en méthodologie
+                        de résolution de problèmes. Je peux concevoir des sites web vitrines modernes, développer des
+                        interfaces adaptées à vos besoins, déboguer du code ou mettre en place des automatisations.
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="faq-card" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>🌐 Proposez-vous des prestations en anglais ou en espagnol ?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Oui, tout à fait ! Je maîtrise couramment l'<strong>anglais</strong> et
+                        l'<strong>espagnol</strong> en plus du français. Je peux ainsi mener des négociations
+                        commerciales avec des interlocuteurs internationaux, rédiger des contenus ou animer des sessions
+                        avec des publics multilingues.
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="faq-card" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>📍 Dans quelles zones géographiques vous déplacez-vous ?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        J'ai deux points d'attache : à <strong>Paris 15ème</strong> (14 rue des 4 Frères Peignot) et à
+                        <strong>Vigneux-sur-Seine</strong> (4 rue Denis Papin, 91270). Je me déplace sur l'ensemble de
+                        l'<strong>Île-de-France</strong> (Paris, Essonne, Hauts-de-Seine, Val-de-Marne, etc.). Les
+                        prestations de développement web, composition musicale et conseil peuvent également être
+                        réalisées à distance en visioconférence.
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="faq-card" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>🐎 En quoi consiste exactement une séance d'équithérapie ?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        L'équithérapie est un accompagnement personnalisé où le cheval agit comme médiateur
+                        thérapeutique. Les séances sont orientées vers l'apaisement, la confiance en soi, la gestion
+                        émotionnelle et le lien relationnel. Le travail s'effectue au sol (pansage, contact, guidage) ou
+                        à cheval selon les besoins et les objectifs de chacun, toujours avec bienveillance et sécurité.
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="faq-card" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>⚡ Quels sont les délais d'intervention et de réponse ?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Je réponds généralement en moins de <strong>2 heures</strong> en journée au <strong>07 76 47 35
+                            99</strong> ou par mail. Selon les urgences et mon planning, une intervention ponctuelle
+                        peut souvent être programmée sous 24 à 48 heures.
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Formulaire pour poser une question et recevoir une notification par mail -->
+            <section class="calculator-box" style="margin-top: 50px;">
+                <div class="calculator-header">
+                    <span class="skill-badge-highlight">Posez votre question</span>
+                    <h3>📬 Vous n'avez pas trouvé votre réponse ?</h3>
+                    <p>Posez directement votre question via le formulaire ci-dessous. <strong>Marvin sera immédiatement
+                            averti par notification e-mail</strong> pour vous apporter une réponse sur-mesure.</p>
+                </div>
+
+                <form onsubmit="handleFaqQuestionSubmit(event)" style="max-width: 650px; margin: 0 auto;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="form-group">
+                            <label for="faqNom">Votre Nom & Prénom *</label>
+                            <input type="text" id="faqNom" class="form-control" placeholder="Ex: Sarah Bernard"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="faqEmail">Votre Adresse E-mail *</label>
+                            <input type="email" id="faqEmail" class="form-control" placeholder="Ex: sarah@example.com"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="faqDomaine">Domaine concerné</label>
+                        <select id="faqDomaine" class="form-control">
+                            <option value="Développement & Code (42)">💻 Développement Web & Code (42)</option>
+                            <option value="Vente & Commerce">💼 Vente & Négociation</option>
+                            <option value="Musique & Création">🎵 Musique & Composition</option>
+                            <option value="Équitation & Équithérapie">🐎 Équitation & Équithérapie</option>
+                            <option value="Cuisine & Gastronomie">🍳 Cuisine & Gastronomie</option>
+                            <option value="Autre question">❓ Autre sujet</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="faqQuestionText">Votre Question *</label>
+                        <textarea id="faqQuestionText" class="form-control" rows="4"
+                            placeholder="Écrivez votre question ici avec le plus de précisions possibles..."
+                            required></textarea>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 25px;">
+                        <button type="submit" class="primary" style="padding: 14px 32px; font-size: 1.05rem;">
+                            🚀 Envoyer ma question (Notification immédiate)
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Boutons de redirection bas de page -->
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 50px 0;">
+                <button class="primary" style="padding: 12px 24px; font-size: 1rem;"
+                    onclick="window.location.href='Contacts.html'">
+                    Accéder aux coordonnées complètes →
+                </button>
+                <button class="btn-back" style="padding: 12px 24px; font-size: 1rem;"
+                    onclick="window.location.href='site.html'">
+                    ← Retour à la page d'accueil
+                </button>
+            </div>
+        </main>
+
+        <!-- Pied de page -->
+        <footer>
+            <p>© 2026 Marvin Hernandez — 07 76 47 35 99 — mar.syl.hernandez25@gmail.com</p>
+        </footer>
+    </div>
+
+    <!-- Scripts pour l'accordéon et la notification par mail -->
+    <script>
+        // Fonction d'accordéon FAQ
+        function toggleFaq(card) {
+            const isActive = card.classList.contains('active');
+
+            // Ferme les autres cartes pour un affichage propre
+            document.querySelectorAll('.faq-card').forEach(c => c.classList.remove('active'));
+
+            if (!isActive) {
+                card.classList.add('active');
+            }
+        }
+
+        // Gestion de l'envoi de la question avec notification e-mail
+        function handleFaqQuestionSubmit(e) {
+            e.preventDefault();
+            const nom = document.getElementById('faqNom').value.trim();
+            const email = document.getElementById('faqEmail').value.trim();
+            const domaine = document.getElementById('faqDomaine').value;
+            const question = document.getElementById('faqQuestionText').value.trim();
+
+            if (!nom || !email || !question) {
+                alert("Veuillez renseigner les champs obligatoires.");
+                return;
+            }
+
+            // Sauvegarde locale de sécurité
+            try {
+                const storedQuestions = JSON.parse(localStorage.getItem('marvin_faq_questions') || '[]');
+                storedQuestions.unshift({
+                    nom: nom,
+                    email: email,
+                    domaine: domaine,
+                    question: question,
+                    date: new Date().toLocaleString()
+                });
+                localStorage.setItem('marvin_faq_questions', JSON.stringify(storedQuestions));
+            } catch (err) {
+                console.error("Sauvegarde locale :", err);
+            }
+
+            // Message utilisateur convivial
+            alert(`✨ Merci ${nom} !\n\nVotre question a été enregistrée. Une notification e-mail est en cours d'envoi vers Marvin Hernandez (mar.syl.hernandez25@gmail.com).`);
+
+            // Déclenchement de la notification mailto vers Marvin
+            const subject = encodeURIComponent(`[FAQ Site] Nouvelle question de ${nom} (${domaine})`);
+            const body = encodeURIComponent(
+                `Bonjour Marvin,\n\nUne nouvelle question a été posée depuis la FAQ de ton site web :\n\n` +
+                `👤 Nom : ${nom}\n` +
+                `✉️ Email de réponse : ${email}\n` +
+                `🏷️ Domaine : ${domaine}\n\n` +
+                `❓ Question :\n${question}\n\n` +
+                `---\nNotification automatique du site officiel Marvin Hernandez`
+            );
+
+            // Ouverture du client mail pour envoyer la notification
+            window.location.href = `mailto:mar.syl.hernandez25@gmail.com?subject=${subject}&body=${body}`;
+
+            // Réinitialisation du formulaire
+            document.getElementById('faqQuestionText').value = '';
+        }
+    </script>
+</body>
+
+</html>

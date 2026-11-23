@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin Hernandez - Services</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='50%25' stop-color='%23a855f7'/%3E%3Cstop offset='100%25' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='26' fill='url(%23g)'/%3E%3Ctext x='50' y='67' font-family='sans-serif' font-size='44' font-weight='900' fill='%23ffffff' text-anchor='middle'%3EMH%3C/text%3E%3Ccircle cx='82' cy='24' r='5' fill='%2338bdf8'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Barre de navigation avec bouton retour -->
+        <header class="navbar">
+            <a href="site.html" class="brand">
+                <span>Marvin Hernandez</span>
+                <span class="brand-badge">SERVICES</span>
+            </a>
+            <div class="nav-buttons">
+                <button onclick="window.location.href='Competences.html'">Compétences</button>
+                <button onclick="window.location.href='Commentaires.html'">Commentaires</button>
+                <button onclick="window.location.href='Contacts.html'">Contacts</button>
+                <button onclick="window.location.href='FAQ.html'">FAQ</button>
+                <button class="btn-back" onclick="window.location.href='site.html'">
+                    ← Retour à l'accueil
+                </button>
+            </div>
+        </header>
+
+        <!-- Titre et sous-titre -->
+        <main>
+            <section class="hero" style="padding-bottom: 20px;">
+                <span class="hero-tag">🌟 Domaines d'expertise</span>
+                <h1>Nos <span class="gradient-text">Services</span></h1>
+                <p>Découvrez l'ensemble des prestations et activités proposées. Filtrez par domaine ou explorez chaque
+                    secteur ci-dessous.</p>
+
+                <!-- Boutons de filtres interactifs -->
+                <div class="filter-bar">
+                    <button class="filter-btn active" onclick="filterServices('all', this)">Tous</button>
+                    <button class="filter-btn" onclick="filterServices('vente', this)">🛍️ Vente & Négociation</button>
+                    <button class="filter-btn" onclick="filterServices('dev', this)">💻 Développement & Code</button>
+                    <button class="filter-btn" onclick="filterServices('musique', this)">🎵 Musique</button>
+                    <button class="filter-btn" onclick="filterServices('sport', this)">🐎 Sport & Équitation</button>
+                    <button class="filter-btn" onclick="filterServices('cuisine', this)">🍳 Cuisine</button>
+                    <button class="filter-btn" onclick="filterServices('humanitaire', this)">🤝 Humanitaire &
+                        Équithérapie</button>
+                </div>
+            </section>
+
+            <!-- Grille des services détaillée -->
+            <section class="grid" id="servicesGrid">
+                <!-- Vente -->
+                <article class="card service-item" data-category="vente">
+                    <div>
+                        <span class="card-icon">🛍️</span>
+                        <h3>Vente & Négociation</h3>
+                        <p>Fort d'un Bachelor 1 technico-commercial : prospection ciblée, négociation commerciale,
+                            valorisation technique de vos offres et relation client de confiance.</p>
+                    </div>
+                    <button class="primary"
+                        onclick="alert('Demande de renseignements pour le service Vente enregistrée !')">Demander un
+                        devis</button>
+                </article>
+
+                <!-- Développement Web (Piscine 42) -->
+                <article class="card service-item" data-category="dev">
+                    <div>
+                        <span class="card-icon">💻</span>
+                        <h3>Développement Web & Code</h3>
+                        <p>Fort de l'expérience rigoureuse de la Piscine de 42 : création et intégration de sites
+                            internet responsives, logique algorithmique, refonte d'interfaces et assistance technique.
+                        </p>
+                    </div>
+                    <button class="primary"
+                        onclick="alert('Demande pour le service Développement enregistrée ! Contactez Marvin pour démarrer.')">Lancer
+                        un projet web</button>
+                </article>
+
+                <!-- Musique -->
+                <article class="card service-item" data-category="musique">
+                    <div>
+                        <span class="card-icon">🎵</span>
+                        <h3>Musique & Composition</h3>
+                        <p>Composition de morceaux originaux, direction artistique, arrangements sonores et
+                            accompagnement créatif sur-mesure.</p>
+                    </div>
+                    <button class="primary"
+                        onclick="alert('Découvrez nos réalisations et créations musicales !')">Écouter des
+                        démos</button>
+                </article>
+
+                <!-- Sport -->
+                <article class="card service-item" data-category="sport">
+                    <div>
+                        <span class="card-icon">🐎</span>
+                        <h3>Sport & Équitation</h3>
+                        <p>Pratique équestre, travail de la posture, coaching sportif, préparation physique et
+                            accompagnement adapté à votre rythme.</p>
+                    </div>
+                    <button class="primary"
+                        onclick="alert('Planifiez votre première séance sportive ou équestre !')">Réserver une
+                        séance</button>
+                </article>
+
+                <!-- Cuisine -->
+                <article class="card service-item" data-category="cuisine">
+                    <div>
+                        <span class="card-icon">🍳</span>
+                        <h3>Cuisine & Gastronomie</h3>
+                        <p>Élaboration de menus créatifs, ateliers de cuisine conviviaux, prestations traiteur et
+                            conseils en nutrition.</p>
+                    </div>
+                    <button class="primary" onclick="alert('Consultez nos menus et propositions gourmandes !')">Voir les
+                        recettes</button>
+                </article>
+
+                <!-- Humanitaire -->
+                <article class="card service-item" data-category="humanitaire">
+                    <div>
+                        <span class="card-icon">🤝</span>
+                        <h3>Humanitaire & Équithérapie</h3>
+                        <p>Actions solidaires, soutien associatif et médiation par l'équithérapie : mettre le contact
+                            humain et animal au service du bien-être et de l'inclusion.</p>
+                    </div>
+                    <button class="primary"
+                        onclick="alert('Merci pour votre intérêt pour nos projets solidaires et d\'équithérapie !')">Participer
+                        au
+                        projet</button>
+                </article>
+            </section>
+
+            <!-- Bouton Retour bas de page -->
+            <div style="text-align: center; margin: 50px 0;">
+                <button class="btn-back" style="padding: 12px 24px; font-size: 1rem;"
+                    onclick="window.location.href='site.html'">
+                    ← Retourner sur le site principal
+                </button>
+            </div>
+        </main>
+
+        <!-- Pied de page -->
+        <footer>
+            <p>© 2026 Marvin Hernandez — Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <!-- Script de filtrage fluide -->
+    <script>
+        function filterServices(category, clickedBtn) {
+            // Mise à jour de l'état actif des boutons
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            if (clickedBtn) {
+                clickedBtn.classList.add('active');
+            }
+
+            // Filtrage des cartes
+            const items = document.querySelectorAll('.service-item');
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

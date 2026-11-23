@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin Hernandez - Site Officiel</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='50%25' stop-color='%23a855f7'/%3E%3Cstop offset='100%25' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='26' fill='url(%23g)'/%3E%3Ctext x='50' y='67' font-family='sans-serif' font-size='44' font-weight='900' fill='%23ffffff' text-anchor='middle'%3EMH%3C/text%3E%3Ccircle cx='82' cy='24' r='5' fill='%2338bdf8'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Barre de Navigation -->
+        <header class="navbar">
+            <a href="site.html" class="brand">
+                <span>Marvin Hernandez</span>
+                <span class="brand-badge">PRO</span>
+            </a>
+            <nav class="nav-buttons">
+                <button class="primary" onclick="window.location.href='Services.html'">Services</button>
+                <button onclick="window.location.href='Competences.html'">Compétences</button>
+                <button onclick="window.location.href='Commentaires.html'">Commentaires</button>
+                <button onclick="window.location.href='Contacts.html'">Nos contacts</button>
+                <button onclick="window.location.href='FAQ.html'">FAQ</button>
+            </nav>
+        </header>
+
+        <!-- Section Héro -->
+        <main>
+            <section class="hero">
+                <span class="hero-tag">✨ Bienvenue sur l'espace officiel</span>
+                <h1>Marvin Hernandez, <span class="gradient-text">the site !</span></h1>
+                <p>Découvrez mes différentes activités, services, compétences et toutes les informations pratiques
+                    réunies sur une interface moderne.</p>
+
+                <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                    <button class="primary" style="font-size: 1rem; padding: 12px 26px;"
+                        onclick="window.location.href='Services.html'">
+                        Explorer les Services →
+                    </button>
+                    <button style="font-size: 1rem; padding: 12px 24px;" onclick="window.location.href='Contacts.html'">
+                        Prendre contact
+                    </button>
+                </div>
+            </section>
+
+            <!-- Grille de navigation interactive -->
+            <section class="grid">
+                <div class="card" onclick="window.location.href='Services.html'" style="cursor: pointer;">
+                    <div>
+                        <span class="card-icon">🚀</span>
+                        <h3>Nos Services</h3>
+                        <p>Vente, musique, sport, cuisine et actions humanitaires : parcourez tout le catalogue de
+                            prestations.</p>
+                    </div>
+                    <button class="primary" style="width: 100%;">Voir les Services</button>
+                </div>
+
+
+                <div class="card" id="competences" onclick="window.location.href='Competences.html'"
+                    style="cursor: pointer;">
+                    <div>
+                        <span class="card-icon">⚡</span>
+                        <h3>Compétences</h3>
+                        <p>Bachelor 1 négociation technico-commerciale, composition musicale, cuisine, équitation &
+                            équithérapie.</p>
+                    </div>
+                    <button class="primary" style="width: 100%;">Découvrir mes compétences</button>
+                </div>
+
+                <div class="card" id="card-commentaires" onclick="window.location.href='Commentaires.html'"
+                    style="cursor: pointer;">
+                    <div>
+                        <span class="card-icon">💬</span>
+                        <h3>Commentaires</h3>
+                        <p>Découvrez les retours d'expérience et publiez votre propre avis sur nos prestations.</p>
+                    </div>
+                    <button class="primary" style="width: 100%;">Lire & Laisser un avis</button>
+                </div>
+
+                <div class="card" id="contacts" onclick="window.location.href='Contacts.html'" style="cursor: pointer;">
+                    <div>
+                        <span class="card-icon">📬</span>
+                        <h3>Nos contacts</h3>
+                        <p>Téléphone (07 76 47 35 99), e-mail, adresses à Paris & Vigneux-sur-Seine et formulaire
+                            direct.</p>
+                    </div>
+                    <button class="primary" style="width: 100%;">Me contacter</button>
+                </div>
+
+                <div class="card" id="faq" onclick="window.location.href='FAQ.html'" style="cursor: pointer;">
+                    <div>
+                        <span class="card-icon">❓</span>
+                        <h3>Foire aux questions</h3>
+                        <p>Questions fréquentes, démarches CESU/salarié, zones d'intervention et formulaire avec
+                            notification par mail.</p>
+                    </div>
+                    <button class="primary" style="width: 100%;">Accéder à la FAQ</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pied de page -->
+        <footer>
+            <p>© 2026 Marvin Hernandez — Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin Hernandez - Compétences</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='50%25' stop-color='%23a855f7'/%3E%3Cstop offset='100%25' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='26' fill='url(%23g)'/%3E%3Ctext x='50' y='67' font-family='sans-serif' font-size='44' font-weight='900' fill='%23ffffff' text-anchor='middle'%3EMH%3C/text%3E%3Ccircle cx='82' cy='24' r='5' fill='%2338bdf8'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Barre de navigation -->
+        <header class="navbar">
+            <a href="site.html" class="brand">
+                <span>Marvin Hernandez</span>
+                <span class="brand-badge">COMPÉTENCES</span>
+            </a>
+            <div class="nav-buttons">
+                <button onclick="window.location.href='Services.html'">Services</button>
+                <button onclick="window.location.href='Commentaires.html'">Commentaires</button>
+                <button onclick="window.location.href='Contacts.html'">Contacts</button>
+                <button onclick="window.location.href='FAQ.html'">FAQ</button>
+                <button class="btn-back" onclick="window.location.href='site.html'">
+                    ← Retour à l'accueil
+                </button>
+            </div>
+        </header>
+
+        <!-- Titre et présentation -->
+        <main>
+            <section class="hero" style="padding-bottom: 25px;">
+                <span class="hero-tag">🎓 Savoir-faire & Expériences</span>
+                <h1>Mes <span class="gradient-text">Compétences</span></h1>
+                <p>Un parcours riche et polyvalent qui allie sens commercial, fibre artistique musicale, passion
+                    culinaire et médiation humaine par l'équithérapie.</p>
+
+                <!-- Filtres par catégorie -->
+                <div class="filter-bar">
+                    <button class="filter-btn active" onclick="filterSkills('all', this)">Toutes</button>
+                    <button class="filter-btn" onclick="filterSkills('commercial', this)">💼 Vente & Commerce</button>
+                    <button class="filter-btn" onclick="filterSkills('dev', this)">💻 Piscine 42 & Code</button>
+                    <button class="filter-btn" onclick="filterSkills('langues', this)">🌐 Anglais & Espagnol</button>
+                    <button class="filter-btn" onclick="filterSkills('musique', this)">🎵 Musique</button>
+                    <button class="filter-btn" onclick="filterSkills('cuisine', this)">🍳 Cuisine</button>
+                    <button class="filter-btn" onclick="filterSkills('equestre', this)">🐎 Équitation &
+                        Équithérapie</button>
+                    <button class="filter-btn" onclick="filterSkills('humanitaire', this)">🤝 Humanitaire</button>
+                </div>
+            </section>
+
+            <!-- Grille des compétences détaillées -->
+            <section class="grid" id="skillsGrid">
+
+                <!-- 1. Vente & Négociation Technico-Commerciale -->
+                <article class="card skill-card" data-category="commercial">
+                    <div>
+                        <span class="skill-badge-highlight">Diplôme & Formation</span>
+                        <span class="card-icon">💼</span>
+                        <h3>Négociation Technico-Commerciale</h3>
+                        <p>Titulaire d'un <strong>Bachelor 1 en Négociation Technico-Commerciale</strong>. Capacité à
+                            comprendre les besoins techniques clients, élaborer des argumentaires percutants, prospecter
+                            et conclure des ventes avec rigueur.</p>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag">Bachelor 1 validé</span>
+                            <span class="skill-tag">Négociation B2B / B2C</span>
+                            <span class="skill-tag">Prospection & Vente</span>
+                            <span class="skill-tag">Relation Client</span>
+                        </div>
+                    </div>
+                    <button class="primary" style="margin-top: 22px;" onclick="window.location.href='Services.html'">Voir
+                        le service Vente</button>
+                </article>
+
+                <!-- 2. Piscine de l'École 42 & Développement -->
+                <article class="card skill-card" data-category="dev">
+                    <div>
+                        <span class="skill-badge-highlight">Immersion Code & Rigueur</span>
+                        <span class="card-icon">💻</span>
+                        <h3>Piscine de l'École 42</h3>
+                        <p>Immersion intensive réussie au sein de la réputée <strong>Piscine de 42</strong> : rigueur
+                            algorithmique en langage C, résolution de problèmes complexes sous haute pression, autonomie
+                            totale et méthode peer-learning.</p>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag">Piscine École 42</span>
+                            <span class="skill-tag">Algorithmie & Langage C</span>
+                            <span class="skill-tag">Résolution de problèmes</span>
+                            <span class="skill-tag">Peer-learning & Rigueur</span>
+                        </div>
+                    </div>
+                    <button class="primary" style="margin-top: 22px;"
+                        onclick="window.location.href='Services.html'">Voir le service Développement</button>
+                </article>
+
+                <!-- 3. Langues : Anglais & Espagnol -->
+                <article class="card skill-card" data-category="langues">
+                    <div>
+                        <span class="skill-badge-highlight">International & Communication</span>
+                        <span class="card-icon">🌐</span>
+                        <h3>Langues : Anglais & Espagnol</h3>
+                        <p>Profil multilingue adapté aux environnements internationaux : <strong>Anglais courant /
+                                professionnel</strong> pour échanger et négocier avec des partenaires étrangers, et
+                            <strong>Espagnol maîtrisé</strong> avec aisance orale et écrite.</p>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag emerald">Anglais courant / pro</span>
+                            <span class="skill-tag emerald">Espagnol fluide</span>
+                            <span class="skill-tag emerald">Français maternel</span>
+                            <span class="skill-tag emerald">Échanges internationaux</span>
+                        </div>
+                    </div>
+                    <button class="primary" style="margin-top: 22px;" onclick="window.location.href='Contacts.html'">Me
+                        contacter</button>
+                </article>
+
+                <!-- 2. Composition Musicale -->
+                <article class="card skill-card" data-category="musique">
+                    <div>
+                        <span class="skill-badge-highlight">Création & Artistique</span>
+                        <span class="card-icon">🎵</span>
+                        <h3>Composition Musicale</h3>
+                        <p>Compositeur passionné : création d'ambiances sonores, mélodies originales et arrangements
+                            musicaux. Grande sensibilité artistique, sens du rythme, de l'harmonie et travail soigné de
+                            la production audio.</p>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag accent">Composition originale</span>
+                            <span class="skill-tag accent">Production sonore</span>
+                            <span class="skill-tag accent">Sens du rythme</span>
+                            <span class="skill-tag accent">Arrangements</span>
+                        </div>
+                    </div>
+                    <button class="primary" style="margin-top: 22px;"
+                        onclick="window.location.href='Services.html'">Découvrir le service musique</button>
+                </article>
+
+                <!-- 3. Cuisine & Gastronomie -->
+                <article class="card skill-card" data-category="cuisine">
+                    <div>
+                        <span class="skill-badge-highlight">Savoir-faire Culinaire</span>
+                        <span class="card-icon">🍳</span>
+                        <h3>Cuisine & Gastronomie</h3>
+                        <p>Très doué en cuisine avec une réelle passion pour la gastronomie. Maîtrise des cuissons,
+                            association subtile des saveurs, organisation méticuleuse et créativité pour régaler
+                            convives et clients.</p>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag amber">Créativité culinaire</span>
+                            <span class="skill-tag amber">Maîtrise des cuissons</span>
+                            <span class="skill-tag amber">Élaboration de menus</span>
+                            <span class="skill-tag amber">Sens du goût</span>
+                        </div>
+                    </div>
+                    <button class="primary" style="margin-top: 22px;"
+                        onclick="window.location.href='Contacts.html'">Réserver un créneau</button>
+                </article>
+
+                <!-- 4. Équitation -->
+                <article class="card skill-card" data-category="equestre">
+                    <div>
+                        <span class="skill-badge-highlight">Discipline & Sport</span>
+                        <span class="card-icon">🐎</span>
+                        <h3>Équitation</h3>
+                        <p>Pratique approfondie de l'équitation. Rigueur, équilibre physique, maîtrise technique
+                            équestre et compréhension fine du comportement de l'animal. Capacité d'adaptation et
+                            endurance.</p>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag emerald">Pratique équestre</span>
+                            <span class="skill-tag emerald">Rigueur & Discipline</span>
+                            <span class="skill-tag emerald">Gestion de l'animal</span>
+                            <span class="skill-tag emerald">Endurance sportive</span>
+                        </div>
+                    </div>
+                    <button class="primary" style="margin-top: 22px;"
+                        onclick="window.location.href='Services.html'">Voir le domaine Sport</button>
+                </article>
+
+                <!-- 5. Équithérapie & Médiation Animale -->
+                <article class="card skill-card" data-category="equestre">
+                    <div>
+                        <span class="skill-badge-highlight">Accompagnement & Bien-être</span>
+                        <span class="card-icon">🤍</span>
+                        <h3>Équithérapie</h3>
+                        <p>Expérience en équithérapie : utilisation du cheval comme partenaire de médiation
+                            thérapeutique. Écoute bienveillante, grande empathie, accompagnement de personnes et
+                            développement de la confiance en soi.</p>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag emerald">Équithérapie</span>
+                            <span class="skill-tag emerald">Médiation animale</span>
+                            <span class="skill-tag emerald">Empathie & Écoute</span>
+                            <span class="skill-tag emerald">Patience & Confiance</span>
+                        </div>
+                    </div>
+                    <button class="primary" style="margin-top: 22px;"
+                        onclick="window.location.href='Contacts.html'">Discuter d'un accompagnement</button>
+                </article>
+
+                <!-- 6. Humanitaire & Solidarité -->
+                <article class="card skill-card" data-category="humanitaire">
+                    <div>
+                        <span class="skill-badge-highlight">Engagement Humain</span>
+                        <span class="card-icon">🤝</span>
+                        <h3>Engagement Humanitaire</h3>
+                        <p>Sens aigu du collectif et dévouement au service des autres. Volonté d'agir concrètement pour
+                            des projets caritatifs, associatifs et solidaire avec dynamisme et esprit d'équipe.</p>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag">Esprit solidaire</span>
+                            <span class="skill-tag">Sens du collectif</span>
+                            <span class="skill-tag">Action associative</span>
+                            <span class="skill-tag">Bienveillance</span>
+                        </div>
+                    </div>
+                    <button class="primary" style="margin-top: 22px;"
+                        onclick="window.location.href='site.html'">Contacter Marvin</button>
+                </article>
+
+            </section>
+
+            <!-- Encadré des atouts clés / Savoir-être -->
+            <section class="calculator-box" style="margin-top: 40px;">
+                <div class="calculator-header">
+                    <h3>🌟 Mes Atouts & Savoir-Être</h3>
+                    <p>Ce qui fait la différence au quotidien dans chaque collaboration :</p>
+                </div>
+
+                <div class="calc-results-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+                    <div>
+                        <div class="calc-stat-label">Communication</div>
+                        <div class="calc-stat-val" style="font-size: 1.3rem;">Écoute & Négociation</div>
+                    </div>
+                    <div>
+                        <div class="calc-stat-label">Esprit</div>
+                        <div class="calc-stat-val" style="font-size: 1.3rem;">Créatif & Artistique</div>
+                    </div>
+                    <div>
+                        <div class="calc-stat-label">Humain</div>
+                        <div class="calc-stat-val" style="font-size: 1.3rem;">Empathie & Patience</div>
+                    </div>
+                    <div>
+                        <div class="calc-stat-label">Engagement</div>
+                        <div class="calc-stat-val" style="font-size: 1.3rem;">Rigueur & Fiabilité</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Boutons de redirection bas de page -->
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 45px 0;">
+                <button class="btn-back" style="padding: 12px 24px; font-size: 1rem;"
+                    onclick="window.location.href='site.html'">
+                    ← Retour à la page d'accueil
+                </button>
+            </div>
+        </main>
+
+        <!-- Pied de page -->
+        <footer>
+            <p>© 2026 Marvin Hernandez — Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <!-- Script de filtrage des compétences -->
+    <script>
+        function filterSkills(category, clickedBtn) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            if (clickedBtn) {
+                clickedBtn.classList.add('active');
+            }
+
+            const cards = document.querySelectorAll('.skill-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
